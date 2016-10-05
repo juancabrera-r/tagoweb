@@ -1,0 +1,22 @@
+$top-footer-background-color: $blue-tago;
+$top-footer-text-color: $white-blue;
+
+
+
+@include if-is-phone {
+  .top-footer{
+    display: none;
+  }
+};
+
+.top-footer {
+  padding-top: 5px;
+  height: 0.2px;
+  background-color: $top-footer-background-color;
+  color: $top-footer-text-color;
+
+}
+
+.top-footer-text {
+  text-align: center;
+}

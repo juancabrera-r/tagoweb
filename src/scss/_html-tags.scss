@@ -1,0 +1,17 @@
+//Variables
+
+$body-background-color : white;
+$title-color: $clear-red;
+$title-font: $footer-font-family;
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: $body-background-color;
+  width: 100%;
+}
+
+img, embed, object, video {
+  max-width: 100%;
+}
+

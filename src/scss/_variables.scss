@@ -1,0 +1,33 @@
+//Font Families
+
+$footer-font-family: Roboto, Arial;
+
+//Responsive Variables:
+
+$tablet-width: 737px;
+$phone-width: $tablet-width - 1px;
+
+
+//Base Colors:
+
+$dark-grey: #272F32;
+$clear-grey: #9DBDC6;
+$white-blue: #E1E6FA;
+$clear-red: #FF3D2E;
+$white-grey: #DAEAEF;
+$dark-blue: #3E606F;
+$white-neutral: #E9F1DF;
+$blue-tago: #0C9BD3;
+
+
+
+//Font Sizes:
+
+h1 {font-size: 1.5em};
+h2 {font-size: 1em};
+h3 {font-size: 0.5em};
+
+@include if-is-phone {
+  h1 {font-size: 1em};
+  h2 {font-size: 0.75em};
+}

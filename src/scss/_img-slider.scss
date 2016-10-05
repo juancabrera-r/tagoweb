@@ -1,0 +1,69 @@
+$background-color-click: $dark-grey;
+$color-click: $white-neutral;
+
+
+@include if-is-phone {
+  header{
+    display: none;
+  }
+};
+
+.img-slider {
+  position: relative;
+  margin: 10px;
+  width: 100%;
+  height: calc(100vh/3);
+}
+
+.img-content {
+  position: relative;
+  height: 100%;
+}
+
+.img-style {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  height: 100%;
+  width: auto;
+}
+
+.header, image {
+  display: none;
+}
+
+.click-left {
+  cursor: pointer;
+  position:absolute;
+  top:45%;
+  left: calc(100vw - 50%);
+  transform: translate(-1300%);
+  color: $color-click;
+  background-color: $background-color-click;
+  border-radius: 100%;
+  padding: .4em;
+  font-weight: bold;
+}
+
+.click-right {
+  cursor: pointer;
+  position:absolute;
+  top:45%;
+  right: calc(100vw - 50%);
+  transform: translate(1300%);
+  color: $color-click;
+  background-color: $background-color-click;
+  border-radius: 100%;
+  padding: .4em;
+  font-weight: bold;
+}
+
+.click-left:hover {
+  opacity: .5;
+}
+
+.click-right:hover {
+  opacity: .5;
+}
+
