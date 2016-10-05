@@ -11,22 +11,28 @@ require('./isotope');
 //var $ = require('masonry');
 //var $window = $(window);
 
-$(window).load(function(){
-            $('.grid').imagesLoaded( function() {
-                $('.grid').isotope({
-                    //itemSelector: '.grid-item',
-                    itemSelector: '.grid-item',
+var $grid = $('.grid')
 
-                    percentPosition: true,
-                    masonry: {
-                        columnWidth: '.grid-sizer',
+$(window).load(function() {
 
-                        gutter: 0,
-                    },
-                });
-            });
-    });
+        $('.grid').isotope({
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            columnWidth: '.grid-sizer',
+            gutter: 0,
+        });
+});
+/*
+var $grid = $('.grid').masonry({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    columnWidth: '.grid-sizer',
+    gutter: 0,
 
+});
+$grid.imagesLoaded().progress( function() {
+    $grid.masonry();
+});*/
     //var $container = $('#container');
     //$container.isotope({
       //itemSelector: '.item',

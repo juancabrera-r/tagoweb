@@ -9,19 +9,20 @@ $font-text-color: $white-neutral;
   overflow: hidden;
   @extend .clearfix;
   background: white;
-  margin: 190px 5% 150px 5%;
+  margin: 190px 1px 20px 1px;
   @include if-is-phone {
-    margin: 80px 5% 20px 5%;
+    margin: 80px 1px 20px 1px;
   }
   text-align: center;
 }
+
 
 .grid-sizer,
 .grid-item {
   @extend .clearfix;
   float: left;
   width: 20%;
-  height: 250px;
+  height: 18em;
 }
 
 .grid-item a{
@@ -69,6 +70,11 @@ $font-text-color: $white-neutral;
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
+    -webkit-transition-duration: 600ms;
+    -moz-transition-duration: 600ms;
+    -ms-transition-duration: 600ms;
+    -o-transition-duration: 600ms;
+    transition-duration: 600ms;
   }
   .text-item-container{
     //display: none;
@@ -85,42 +91,55 @@ $font-text-color: $white-neutral;
     }
   }
 }
+/*
+//SCREEN
+@media all and (min-width: 1500px) and (max-width: 1600px) {
+  .grid-sizer {width: 25%; height: 30em;}
+  .grid-item {width: 25%; height: 30em;}
+}
+*/
+//SCREEN
+@media all and (min-width: 1200px) and (max-width: 1499px) {
+  .grid-sizer {width: 25%; height: 20em;}
+  .grid-item {width: 25%; height: 20em;}
+}
 
 //SCREEN
-@media all and (min-width: 1200px) and (max-width: 1500px) {
-  .grid-sizer {width: 25%;}
-  .grid-item {width: 25%;}
+@media all and (min-width: 1199px) and (max-width: 1299px) {
+  .grid-sizer {width: 25%; height: 20em;}
+  .grid-item {width: 25%; height: 20em;}
 }
+
 
 //TABLET HORIZONTAL
 @media all and (min-width: 801px) and (max-width: 1199px) {
-  .grid-sizer {width: 33.333%;}
-  .grid-item {width: 33.333%;}
+  .grid-sizer {width: 33.333%; height: 20em;}
+  .grid-item {width: 33.333%; height: 20em;}
 }
 
 //PHONE HORIZONTAL AND TABLET VERTICAL
 @media all and (min-width: 501px) and (max-width: 800px) {
-  .grid-sizer {width: 50%;}
-  .grid-item {width: 50%;}
+  .grid-sizer {width: 50%; height: 20em;}
+  .grid-item {width: 50%; height: 20em;}
 }
 
 //PHONE VERTICAL
 @media all and (max-width: 500px) {
-  .grid-sizer {width: 100%;}
-  .grid-item {width: 100%;}
+  .grid-sizer {width: 100%; height: 15em;}
+  .grid-item {width: 100%; height: 15em;}
 
 }
 
 
 /**** Transitions for Masonry ****/
-
+/*
 .masonry,
 .masonry .masonry-brick {
-  -webkit-transition-duration: 0.6s;
-  -moz-transition-duration: 0.6s;
-  -ms-transition-duration: 0.6s;
-  -o-transition-duration: 0.6s;
-  transition-duration: 0.6s;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
 }
 
 
@@ -140,8 +159,10 @@ $font-text-color: $white-neutral;
   -o-transition-property: left, right, top;
   transition-property: left, right, top;
 }
+*/
 
 /**** Transitions for ISOTOPE ****/
+
 .isotope-item {
   z-index: 2;
 }
