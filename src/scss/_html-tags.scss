@@ -6,6 +6,8 @@ $title-font: $footer-font-family;
 
 * { box-sizing: border-box; }
 
+html { overflow-y: scroll; }
+
 body {
   background-color: $body-background-color;
   width: 100%;
