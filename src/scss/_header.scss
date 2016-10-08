@@ -31,31 +31,37 @@ $top-footer-text-color: $white-blue;
   width: 100%;
 }
 
+
+.header-img {
+  @include if-is-phone{
+    canvas {
+      display: none;
+    }
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .header-content {
   position: absolute;
+  list-style: none;
   right: 5%;
-  top: 35%;
+  top: 15%;
   width: 100%;
   text-align: right;
 }
 
-.header-img {
-  position: relative;
-  float: left;
-  max-width: 100%;
-}
 
 .header-link {
-  display: inline-block;
-  list-style: none;
-  padding: 2%;
+  display: block;
+  padding: 1%;
+  position: relative;
   text-decoration: none;
   text-underline: none;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 10px;
   font-family: $link-font-family;
 }
-
 
 .header-link a:-webkit-any-link {
   text-decoration: none;
@@ -82,21 +88,43 @@ $top-footer-text-color: $white-blue;
 }
 
 
-/*
+
 @include if-is-tablet{
-  .menu-phone {
-    display: none;
-  }
-  .header-content {
+
+
+  .list-container {
     width: 100%;
-    height: 180px;
   }
 
   .header-img {
-    display:inline-block;
-    justify-content: center;
-    align-items: center;
-    padding: 1% 1% 1% 1% ;
+    img {
+      display: none;
+    }
+    display: inline;
+    position: relative;
+    float: left;
+    max-width: 100%;
+  }
+
+  .header-content {
+    position: absolute;
+    display: inline;
+    right: 5%;
+    top: 35%;
+    width: 100%;
+    text-align: right;
+  }
+
+
+  .header-link {
+    display: inline-block;
+    list-style: none;
+    padding: 2%;
+    text-decoration: none;
+    text-underline: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: $link-font-family;
   }
 }
-*/
+

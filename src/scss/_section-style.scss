@@ -10,7 +10,7 @@ $font-text-color: $white-neutral;
   background: white;
   margin: 190px 1px 20px 1px;
   @include if-is-phone {
-    margin: 90px 1px 20px 1px;
+    margin: 80px 1px 20px 1px;
 
   }
 }

@@ -1,9 +1,27 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+
+var viewPortWidth = $(window).width();
+var width = 736;
+
+/*
+if  ( viewPortWidth > 736) {
+    $("lu").removeClass("sm"),
+        $("lu").removeClass("sm-clean")
+}*/
+
+if  ( viewPortWidth < 800) {
+    $("lu").addClass("sm"),
+        $("lu").addClass("sm-clean")
+
+}
+},{}],2:[function(require,module,exports){
+require('./_removing-class');
 require('./logo-canvas');
 require('./isotope');
 
 
-},{"./isotope":2,"./logo-canvas":3}],2:[function(require,module,exports){
+
+},{"./_removing-class":1,"./isotope":3,"./logo-canvas":4}],3:[function(require,module,exports){
 //var $ = require('masonry');
 //var $window = $(window);
 
@@ -73,7 +91,7 @@ $grid.imagesLoaded().progress( function() {
 
 
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
@@ -171,4 +189,4 @@ setTimeout(function(){
     ctx.fillRect(250, 161, 22, 4);
     ctx.fillRect(250, 130, 22, 2);
 }, 3500 );
-},{}]},{},[1]);
+},{}]},{},[2]);
